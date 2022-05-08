@@ -46,6 +46,18 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
 
         Context context = null;
 
+        holder.phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String call = model.getPhone();
+                String s = "tel:" + call;
+                Intent intent = new Intent(Intent.ACTION_CALL);
+                intent.setData(Uri.parse(s));
+                context.startActivity(intent);
+
+            }
+        });
+
 
         holder.edit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,19 +119,6 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
         });
 
 
-        holder.phone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String call = model.getPhone();
-                String s = "tel:" + call;
-                Intent intent = new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse(s));
-                context.startActivity(intent);
-                
-            }
-        });
-
-
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -177,4 +176,5 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
             delete=(Button)itemView.findViewById(R.id.deleteButton);
         }
     }
+
 }

@@ -79,6 +79,7 @@ public class DonorList extends AppCompatActivity {
 
         SearchView searchView=(SearchView)item.getActionView();
 
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
         {
             @Override
