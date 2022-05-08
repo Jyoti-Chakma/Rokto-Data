@@ -6,8 +6,8 @@
         <entry key="app/src/main/res/drawable/phone.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_add_donor.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_donor_list.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/dialogcontent.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/dialogcontent.xml" value="0.165" />
         <entry key="app/src/main/res/layout/item.xml" value="0.125" />
         <entry key="app/src/main/res/menu/searchmenu.xml" value="0.1" />
       </map>

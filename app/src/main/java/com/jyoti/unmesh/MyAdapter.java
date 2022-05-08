@@ -2,7 +2,10 @@ package com.jyoti.unmesh;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +43,8 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
         holder.donated.setText(model.getDonated());
         holder.age.setText(model.getAge());
         holder.blood.setText(model.getBlood());
+
+        Context context = null;
 
 
         holder.edit.setOnClickListener(new View.OnClickListener() {
@@ -102,12 +107,25 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
         });
 
 
+        holder.phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String call = model.getPhone();
+                String s = "tel:" + call;
+                Intent intent = new Intent(Intent.ACTION_CALL);
+                intent.setData(Uri.parse(s));
+                context.startActivity(intent);
+                
+            }
+        });
+
+
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder=new AlertDialog.Builder(holder.name.getContext());
-                builder.setTitle("Delete Panel");
-                builder.setMessage("Delete...?");
+                builder.setTitle("Delete Donors?");
+                builder.setMessage("Are you sure?");
 
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override

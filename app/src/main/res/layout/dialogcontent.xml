@@ -21,6 +21,7 @@
         android:hint="Name"
         android:id="@+id/nameEdit"
         android:layout_marginTop="10dp"
+        android:paddingHorizontal="20dp"
         android:textSize="20sp"/>
 
     <EditText
@@ -28,6 +29,7 @@
         android:layout_height="wrap_content"
         android:hint="Address"
         android:id="@+id/addressEdit"
+        android:paddingHorizontal="20dp"
         android:layout_marginTop="10dp"
         android:textSize="20sp"/>
 
@@ -36,6 +38,7 @@
         android:layout_height="wrap_content"
         android:hint="Last Donated"
         android:id="@+id/donatedEdit"
+        android:paddingHorizontal="20dp"
         android:layout_marginTop="10dp"
         android:textSize="20sp"/>
 
@@ -44,6 +47,7 @@
         android:layout_height="wrap_content"
         android:hint="Age"
         android:id="@+id/ageEdit"
+        android:paddingHorizontal="20dp"
         android:layout_marginTop="10dp"
         android:textSize="20sp"/>
 
@@ -52,6 +56,7 @@
         android:layout_height="wrap_content"
         android:hint="Blood Group"
         android:id="@+id/bloodEdit"
+        android:paddingHorizontal="20dp"
         android:layout_marginTop="10dp"
         android:textSize="20sp"/>
 
@@ -60,6 +65,7 @@
         android:layout_height="wrap_content"
         android:hint="Phone"
         android:id="@+id/phoneEdit"
+        android:paddingHorizontal="20dp"
         android:layout_marginTop="10dp"
         android:textSize="20sp"/>
 

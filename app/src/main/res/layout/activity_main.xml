@@ -28,10 +28,20 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Unmesh"
+            android:text="উন্মেষ"
             android:gravity="center"
             android:textColor="@color/black"
             android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="বিনামুল্যে রক্তদান এবং বিভিন্ন সামাজিক স্বেচ্ছাসেবিমুলক কাজে এগিয়ে আসার উদ্দেশ্যে উন্মেষ এর পথ চলা"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <Button
