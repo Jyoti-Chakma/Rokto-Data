@@ -3,10 +3,10 @@
     package="com.jyoti.unmesh">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
-        android:name="com.jyoti.unmesh.OfflineFirebase"
+        android:name=".OfflineFirebase"
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
@@ -14,8 +14,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Unmesh">
         <activity
-            android:name=".DonorList"
+            android:name=".ABNegative"
             android:exported="false" />
+        <activity
+            android:name=".ONegative"
+            android:exported="false" />
+        <activity
+            android:name=".OPositive"
+            android:exported="false" />
+        <activity
+            android:name=".BNegative"
+            android:exported="false" />
+        <activity
+            android:name=".BPositive"
+            android:exported="false" />
+        <activity
+            android:name=".ANegative"
+            android:exported="false" />
+        <activity
+            android:name=".APositive"
+            android:exported="false" />
+        <activity
+            android:name=".GroupList"
+            android:exported="false" />
+        <activity
+            android:name=".DonorList"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AddDonor"
             android:exported="false" />

@@ -35,6 +35,8 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
         super(options);
     }
 
+    Context context;
+
     @Override
     protected void onBindViewHolder(@NonNull final myviewholder holder, @SuppressLint("RecyclerView") final int position, @NonNull final model model)
     {
@@ -44,15 +46,12 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
         holder.age.setText(model.getAge());
         holder.blood.setText(model.getBlood());
 
-        Context context = null;
-
-        holder.phone.setOnClickListener(new View.OnClickListener() {
+        holder.call.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 String call = model.getPhone();
                 String s = "tel:" + call;
-                Intent intent = new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse(s));
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse(s));
                 context.startActivity(intent);
 
             }
@@ -64,7 +63,7 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
             public void onClick(View view) {
                 final DialogPlus dialogPlus=DialogPlus.newDialog(holder.name.getContext())
                         .setContentHolder(new ViewHolder(R.layout.dialogcontent))
-                        .setExpanded(true,1500)
+                        .setExpanded(true,1400)
                         .create();
 
                 View myview=dialogPlus.getHolderView();
@@ -160,7 +159,7 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
     {
 
         Button edit,delete;
-        ImageButton phone;
+        ImageButton call;
         TextView name,address,donated,age,blood;
         public myviewholder(@NonNull View itemView)
         {
@@ -170,7 +169,7 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
             donated=(TextView)itemView.findViewById(R.id.lastDonated);
             age=(TextView)itemView.findViewById(R.id.tvage);
             blood=(TextView)itemView.findViewById(R.id.bloodgroup);
-            phone=(ImageButton) itemView.findViewById(R.id.phone);
+            call= itemView.findViewById(R.id.phone);
 
             edit=(Button)itemView.findViewById(R.id.editButton);
             delete=(Button)itemView.findViewById(R.id.deleteButton);

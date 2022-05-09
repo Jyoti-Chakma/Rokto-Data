@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button recylerviewbtn;
+    Button recylerviewbtn, frequency, groupList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         recylerviewbtn = findViewById(R.id.recyclerviewbtn);
+        frequency = findViewById(R.id.frequency);
+        groupList = findViewById(R.id.groupList);
+
         recylerviewbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,6 +30,28 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        frequency.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,APositive.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+
+        groupList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,GroupList.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+
 
     }
 }

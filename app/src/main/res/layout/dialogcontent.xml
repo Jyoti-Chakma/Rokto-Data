@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Update Donors Data"
-        android:background="#009688"
+        android:background="#F44336"
         android:textSize="25sp"
         android:gravity="center"
         android:textColor="#fff"/>

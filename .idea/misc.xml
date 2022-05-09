@@ -4,9 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/phone.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_abnegative.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_abpositive.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_add_donor.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/activity_anegative.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_apositive.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_bnegative.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_bpositive.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_donor_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_group_list.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/activity_onegative.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_opositive.xml" value="0.1" />
         <entry key="app/src/main/res/layout/dialogcontent.xml" value="0.165" />
         <entry key="app/src/main/res/layout/item.xml" value="0.125" />
         <entry key="app/src/main/res/menu/searchmenu.xml" value="0.1" />
