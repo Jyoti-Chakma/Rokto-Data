@@ -46,15 +46,17 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
         holder.age.setText(model.getAge());
         holder.blood.setText(model.getBlood());
 
-        holder.call.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String call = model.getPhone();
-                String s = "tel:" + call;
-                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse(s));
-                context.startActivity(intent);
+        holder.call.setOnClickListener(v -> {
+            String call = model.getPhone();
+            String s = "tel:" + call;
+            Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(s));
+            v.getContext().startActivity(intent);
 
-            }
+
+//                Intent callIntent = new Intent(Intent.ACTION_CALL);
+//                callIntent.setData(Uri.parse("tel:"+call));
+//                startActivity(callIntent);
+
         });
 
 

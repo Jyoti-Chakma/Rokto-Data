@@ -56,14 +56,23 @@ public class DonorList extends AppCompatActivity {
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),AddDonor.class));
             }
+
         });
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId()==android.R.id.home)
         {
-            this.finish();
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
