@@ -101,13 +101,13 @@ public class DonorList extends AppCompatActivity {
         {
             @Override
             public boolean onQueryTextSubmit(String s) {
-                processsearch(s);
+                processsearch(s.length()==0? s : s.substring(0,1).toUpperCase()+s.substring(1).toLowerCase());
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String s) {
-                processsearch(s);
+                processsearch(s.length()==0? s : s.substring(0,1).toUpperCase()+s.substring(1).toLowerCase());
                 return false;
             }
         });
@@ -119,7 +119,7 @@ public class DonorList extends AppCompatActivity {
     {
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("donors").orderByChild("blood").startAt(s).endAt(s+"\uf8ff"), model.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("donors").orderByChild("name").startAt(s).endAt(s+"\uf8ff"), model.class)
                         .build();
 
         adapter=new MyAdapter(options);

@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Unmesh">
         <activity
+            android:name=".EmergencyNumber"
+            android:exported="false" />
+        <activity
+            android:name=".ABPositive"
+            android:exported="false" />
+        <activity
             android:name=".ABNegative"
             android:exported="false" />
         <activity
@@ -42,7 +48,8 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AddDonor"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Add New Donor" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

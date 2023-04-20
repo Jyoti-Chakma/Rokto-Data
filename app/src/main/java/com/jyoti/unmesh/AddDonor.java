@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
@@ -28,19 +29,19 @@ public class AddDonor extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_donor);
 
-        name=(EditText)findViewById(R.id.addName);
-        address=(EditText)findViewById(R.id.addAddress);
-        donated=(EditText)findViewById(R.id.addDonated);
-        age=(EditText)findViewById(R.id.addAge);
-        blood=(EditText)findViewById(R.id.addBlood);
-        phone=(EditText)findViewById(R.id.addPhone);
+        name=(TextInputEditText)findViewById(R.id.addName);
+        address=(TextInputEditText)findViewById(R.id.addAddress);
+        donated=(TextInputEditText)findViewById(R.id.addDonated);
+        age=(TextInputEditText)findViewById(R.id.addAge);
+        blood=(TextInputEditText)findViewById(R.id.addBlood);
+        phone=(TextInputEditText)findViewById(R.id.addPhone);
 
         back=(Button)findViewById(R.id.add_back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                finish();
+                Intent intent = new Intent(getApplicationContext(), DonorList.class);
+                startActivity(intent);
             }
         });
 
@@ -51,6 +52,12 @@ public class AddDonor extends AppCompatActivity
                 processinsert();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, DonorList.class);
+        startActivity(intent);
     }
 
     private void processinsert()
@@ -73,7 +80,8 @@ public class AddDonor extends AppCompatActivity
                         age.setText("");
                         blood.setText("");
                         phone.setText("");
-                        Toast.makeText(getApplicationContext(),"Inserted Successfully",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Added Successfully",Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(getApplicationContext(), DonorList.class));
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {

@@ -47,4 +47,11 @@ public class APositive extends AppCompatActivity {
         super.onStop();
         adapter.stopListening();
     }
+
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, GroupList.class);
+        startActivity(intent);
+    }
 }

@@ -30,7 +30,6 @@ public class GroupList extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(GroupList.this,APositive.class);
                 startActivity(i);
-                finish();
             }
         });
 
@@ -40,7 +39,6 @@ public class GroupList extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(GroupList.this,ANegative.class);
                 startActivity(i);
-                finish();
             }
         });
 
@@ -50,7 +48,6 @@ public class GroupList extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(GroupList.this,BPositive.class);
                 startActivity(i);
-                finish();
             }
         });
 
@@ -59,7 +56,6 @@ public class GroupList extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(GroupList.this,BNegative.class);
                 startActivity(i);
-                finish();
             }
         });
 
@@ -68,7 +64,6 @@ public class GroupList extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(GroupList.this,ABPositive.class);
                 startActivity(i);
-                finish();
             }
         });
 
@@ -78,7 +73,6 @@ public class GroupList extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(GroupList.this,ABNegative.class);
                 startActivity(i);
-                finish();
             }
         });
 
@@ -87,7 +81,6 @@ public class GroupList extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(GroupList.this,OPositive.class);
                 startActivity(i);
-                finish();
             }
         });
 
@@ -96,8 +89,14 @@ public class GroupList extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(GroupList.this,ONegative.class);
                 startActivity(i);
-                finish();
             }
         });
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
