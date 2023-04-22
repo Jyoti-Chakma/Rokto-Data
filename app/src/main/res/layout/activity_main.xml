@@ -18,7 +18,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:src="@drawable/logo"
+            android:src="@drawable/unmesh"
             />
 
         <TextView
@@ -29,7 +29,7 @@
             android:gravity="center"
             android:textColor="@color/black"
             android:textSize="30sp"
-            android:paddingBottom="10dp"
+            android:paddingBottom="15dp"
             android:textStyle="bold" />
 
         <TextView
@@ -39,7 +39,8 @@
             android:text="বিনামুল্যে রক্তদান এবং বিভিন্ন সামাজিক স্বেচ্ছাসেবিমুলক কাজে এগিয়ে আসার উদ্দেশ্যে উন্মেষ এর পথ চলা"
             android:gravity="center"
             android:textColor="@color/black"
-            android:paddingHorizontal="15dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginHorizontal="5dp"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -77,6 +78,19 @@
             android:layout_marginVertical="10dp"
             android:backgroundTint="#F44336"
             android:text="HOSPITALS" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="30dp"
+        android:gravity="center|bottom">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:text="Developed by:\nJyoti Chakma"/>
 
     </LinearLayout>
 
