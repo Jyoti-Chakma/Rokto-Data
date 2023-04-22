@@ -66,7 +66,7 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
             public void onClick(View view) {
                 final DialogPlus dialogPlus=DialogPlus.newDialog(holder.name.getContext())
                         .setContentHolder(new ViewHolder(R.layout.dialogcontent))
-                        .setExpanded(true,1400)
+                        .setExpanded(true,1500)
                         .create();
 
                 View myview=dialogPlus.getHolderView();
