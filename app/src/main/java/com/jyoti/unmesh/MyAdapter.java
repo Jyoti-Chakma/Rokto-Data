@@ -22,6 +22,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.FirebaseDatabase;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
@@ -69,12 +70,12 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
                         .create();
 
                 View myview=dialogPlus.getHolderView();
-                final EditText name=myview.findViewById(R.id.nameEdit);
-                final EditText address=myview.findViewById(R.id.addressEdit);
-                final EditText donated=myview.findViewById(R.id.donatedEdit);
-                final EditText age=myview.findViewById(R.id.ageEdit);
-                final EditText blood=myview.findViewById(R.id.bloodEdit);
-                final EditText phone=myview.findViewById(R.id.phoneEdit);
+                final TextInputEditText name=myview.findViewById(R.id.nameEdit);
+                final TextInputEditText address=myview.findViewById(R.id.addressEdit);
+                final TextInputEditText donated=myview.findViewById(R.id.donatedEdit);
+                final TextInputEditText age=myview.findViewById(R.id.ageEdit);
+                final TextInputEditText blood=myview.findViewById(R.id.bloodEdit);
+                final TextInputEditText phone=myview.findViewById(R.id.phoneEdit);
                 Button submit=myview.findViewById(R.id.usubmit);
 
 

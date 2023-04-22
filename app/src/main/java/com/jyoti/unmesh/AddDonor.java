@@ -88,7 +88,7 @@ public class AddDonor extends AppCompatActivity
                     @Override
                     public void onFailure(@NonNull Exception e)
                     {
-                        Toast.makeText(getApplicationContext(),"Could not insert",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Could not Added",Toast.LENGTH_LONG).show();
                     }
                 });
 
