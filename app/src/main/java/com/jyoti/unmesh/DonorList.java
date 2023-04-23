@@ -75,7 +75,11 @@ public class DonorList extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        recview.getRecycledViewPool().clear();
         adapter.startListening();
+        recview.getRecycledViewPool().clear();
+        adapter.notifyDataSetChanged();
+
     }
 
     @Override

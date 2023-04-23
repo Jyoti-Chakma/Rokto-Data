@@ -52,6 +52,7 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
             v.getContext().startActivity(intent);
 
 
+
 //                Intent callIntent = new Intent(Intent.ACTION_CALL);
 //                callIntent.setData(Uri.parse("tel:"+call));
 //                startActivity(callIntent);
@@ -136,8 +137,7 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
             builder.show();
         });
 
-    } // End of OnBindViewMethod
-
+    } // End of OnBindVi// ewMethod
     @NonNull
     @Override
     public myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
@@ -166,7 +166,7 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
             edit=(Button)itemView.findViewById(R.id.editButton);
             delete=(Button)itemView.findViewById(R.id.deleteButton);
         }
-    }
 
+    }
 
 }
