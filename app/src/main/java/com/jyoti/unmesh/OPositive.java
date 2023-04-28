@@ -30,7 +30,7 @@ public class OPositive extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("donors").orderByChild("blood").equalTo("O+"), model.class)
                         .build();
 
-        adapter=new MyAdapter(options);
+        adapter = new MyAdapter(options);
         oPositiveView.setAdapter(adapter);
 
     }

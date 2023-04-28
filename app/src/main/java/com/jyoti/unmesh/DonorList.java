@@ -34,7 +34,7 @@ public class DonorList extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
-        recView= findViewById(R.id.recview);
+        recView = findViewById(R.id.recview);
         recView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<model> options =
@@ -42,11 +42,11 @@ public class DonorList extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("donors"), model.class)
                         .build();
 
-        adapter=new MyAdapter(options);
+        adapter = new MyAdapter(options);
         recView.setAdapter(adapter);
 
-        fb= findViewById(R.id.fadd);
-        fb.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(),AddDonor.class)));
+        fb = findViewById(R.id.fadd);
+        fb.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), AddDonor.class)));
     }
 
 
@@ -58,8 +58,7 @@ public class DonorList extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId()==android.R.id.home)
-        {
+        if (item.getItemId() == android.R.id.home) {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
@@ -85,23 +84,21 @@ public class DonorList extends AppCompatActivity {
 
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        getMenuInflater().inflate(R.menu.searchmenu,menu);
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.searchmenu, menu);
         MenuItem item = menu.findItem(R.id.search);
-        SearchView searchView = (SearchView)item.getActionView();
+        SearchView searchView = (SearchView) item.getActionView();
 
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
-        {
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
-                processSearch(s.length()==0? s : s.substring(0,1).toUpperCase()+s.substring(1).toLowerCase());
+                processSearch(s.length() == 0 ? s : s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase());
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String s) {
-                processSearch(s.length()==0? s : s.substring(0,1).toUpperCase()+s.substring(1).toLowerCase());
+                processSearch(s.length() == 0 ? s : s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase());
                 return false;
             }
         });
@@ -109,14 +106,13 @@ public class DonorList extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    private void processSearch(String s)
-    {
+    private void processSearch(String s) {
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("donors").orderByChild("name").startAt(s).endAt(s+"\uf8ff"), model.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("donors").orderByChild("name").startAt(s).endAt(s + "\uf8ff"), model.class)
                         .build();
 
-        adapter=new MyAdapter(options);
+        adapter = new MyAdapter(options);
         adapter.startListening();
         recView.setAdapter(adapter);
     }

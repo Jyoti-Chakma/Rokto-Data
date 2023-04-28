@@ -22,7 +22,7 @@ public class BNegative extends AppCompatActivity {
         setContentView(R.layout.activity_bnegative);
         setTitle("B- Blood Donors");
 
-        bNegativeView= findViewById(R.id.bNegativeView);
+        bNegativeView = findViewById(R.id.bNegativeView);
         bNegativeView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<model> options =
@@ -30,7 +30,7 @@ public class BNegative extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("donors").orderByChild("blood").equalTo("B-"), model.class)
                         .build();
 
-        adapter=new MyAdapter(options);
+        adapter = new MyAdapter(options);
         bNegativeView.setAdapter(adapter);
 
     }

@@ -8,11 +8,12 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
+
 import com.jyoti.unmesh.databinding.FragmentFirstBinding;
 
 public class FirstFragment extends Fragment {
 
-private FragmentFirstBinding binding;
+    private FragmentFirstBinding binding;
 
     @Override
     public View onCreateView(
@@ -20,8 +21,8 @@ private FragmentFirstBinding binding;
             Bundle savedInstanceState
     ) {
 
-      binding = FragmentFirstBinding.inflate(inflater, container, false);
-      return binding.getRoot();
+        binding = FragmentFirstBinding.inflate(inflater, container, false);
+        return binding.getRoot();
 
     }
 
@@ -32,7 +33,7 @@ private FragmentFirstBinding binding;
                 .navigate(R.id.action_FirstFragment_to_SecondFragment));
     }
 
-@Override
+    @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;

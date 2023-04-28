@@ -30,7 +30,7 @@ public class ONegative extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("donors").orderByChild("blood").equalTo("O-"), model.class)
                         .build();
 
-        adapter=new MyAdapter(options);
+        adapter = new MyAdapter(options);
         oNegativeView.setAdapter(adapter);
 
     }

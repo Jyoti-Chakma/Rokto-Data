@@ -24,25 +24,24 @@ public class MainActivity extends AppCompatActivity {
         groupList = findViewById(R.id.groupList);
 
         recyclerViewBtn.setOnClickListener(v -> {
-            Intent i = new Intent(MainActivity.this,DonorList.class);
+            Intent i = new Intent(MainActivity.this, DonorList.class);
             startActivity(i);
             finish();
         });
 
 
         frequency.setOnClickListener(view -> {
-            Intent i = new Intent(MainActivity.this,APositive.class);
+            Intent i = new Intent(MainActivity.this, APositive.class);
             startActivity(i);
             finish();
         });
 
 
         groupList.setOnClickListener(view -> {
-            Intent i = new Intent(MainActivity.this,GroupList.class);
+            Intent i = new Intent(MainActivity.this, GroupList.class);
             startActivity(i);
             finish();
         });
-
 
 
     }

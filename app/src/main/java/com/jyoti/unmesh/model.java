@@ -1,12 +1,12 @@
 package com.jyoti.unmesh;
 
-public class model
-{
-    String name,address,donated,age,blood,phone;
-    model()
-    {
+public class model {
+    String name, address, donated, age, blood, phone;
+
+    model() {
 
     }
+
     public model(String name, String address, String donated, String age, String blood, String phone) {
         this.name = name;
         this.address = address;

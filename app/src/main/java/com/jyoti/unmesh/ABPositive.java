@@ -30,7 +30,7 @@ public class ABPositive extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("donors").orderByChild("blood").equalTo("AB+"), model.class)
                         .build();
 
-        adapter=new MyAdapter(options);
+        adapter = new MyAdapter(options);
         abPositiveView.setAdapter(adapter);
 
     }
