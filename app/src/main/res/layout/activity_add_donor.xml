@@ -4,17 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".AddDonor">
 
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/addName"
             android:layout_width="match_parent"
@@ -25,11 +26,12 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/addAddress"
             android:layout_width="match_parent"
@@ -40,11 +42,12 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/addDonated"
             android:layout_width="match_parent"
@@ -54,11 +57,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/addAge"
             android:layout_width="match_parent"
@@ -68,11 +72,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/addBlood"
             android:layout_width="match_parent"
@@ -82,12 +87,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="30dp">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/addPhone"
             android:layout_width="match_parent"
@@ -97,19 +103,19 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/add_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        android:id="@+id/add_submit"
-        android:textSize="20sp"
-        android:text="Add to Database"/>
+        android:text="Add to Database"
+        android:textSize="20sp" />
 
     <Button
+        android:id="@+id/add_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/add_back"
-        android:textSize="20sp"
-        android:text="Back"/>
+        android:text="Back"
+        android:textSize="20sp" />
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

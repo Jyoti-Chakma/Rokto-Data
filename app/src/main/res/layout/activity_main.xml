@@ -4,43 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
     android:layout_marginTop="40dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:src="@drawable/unmesh"
-            />
+            android:src="@drawable/unmesh" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="উন্মেষ"
             android:gravity="center"
+            android:paddingBottom="15dp"
+            android:text="উন্মেষ"
             android:textColor="@color/black"
             android:textSize="30sp"
-            android:paddingBottom="15dp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="বিনামুল্যে রক্তদান এবং বিভিন্ন সামাজিক স্বেচ্ছাসেবিমুলক কাজে এগিয়ে আসার উদ্দেশ্যে উন্মেষ এর পথ চলা"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:paddingHorizontal="10dp"
             android:layout_marginHorizontal="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="বিনামুল্যে রক্তদান এবং বিভিন্ন সামাজিক স্বেচ্ছাসেবিমুলক কাজে এগিয়ে আসার উদ্দেশ্যে উন্মেষ এর পথ চলা"
+            android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -86,11 +85,12 @@
         android:layout_height="match_parent"
         android:layout_marginVertical="30dp"
         android:gravity="center|bottom">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="bottom"
-            android:text="Developed by:\nJyoti Chakma"/>
+            android:text="Developed by:\nJyoti Chakma" />
 
     </LinearLayout>
 
