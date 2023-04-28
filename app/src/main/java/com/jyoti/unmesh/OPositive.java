@@ -37,7 +37,10 @@ public class OPositive extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        oPositiveView.getRecycledViewPool().clear();
         adapter.startListening();
+        oPositiveView.getRecycledViewPool().clear();
+        adapter.notifyDataSetChanged();
     }
 
     @Override

@@ -37,7 +37,10 @@ public class ABNegative extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        abNegativeView.getRecycledViewPool().clear();
         adapter.startListening();
+        abNegativeView.getRecycledViewPool().clear();
+        adapter.notifyDataSetChanged();
     }
 
     @Override

@@ -37,7 +37,10 @@ public class BPositive extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        bPositiveView.getRecycledViewPool().clear();
         adapter.startListening();
+        bPositiveView.getRecycledViewPool().clear();
+        adapter.notifyDataSetChanged();
     }
 
     @Override

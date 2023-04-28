@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
@@ -34,7 +33,7 @@ public class DonorList extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
-        recview=(RecyclerView)findViewById(R.id.recview);
+        recview= findViewById(R.id.recview);
         recview.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<model> options =
@@ -45,14 +44,8 @@ public class DonorList extends AppCompatActivity {
         adapter=new MyAdapter(options);
         recview.setAdapter(adapter);
 
-        fb=(FloatingActionButton)findViewById(R.id.fadd);
-        fb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),AddDonor.class));
-            }
-
-        });
+        fb= findViewById(R.id.fadd);
+        fb.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(),AddDonor.class)));
     }
 
 
