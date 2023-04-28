@@ -1,5 +1,6 @@
 package com.jyoti.unmesh;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -19,7 +20,7 @@ import java.util.Objects;
 
 public class DonorList extends AppCompatActivity {
 
-    RecyclerView recview;
+    RecyclerView recView;
     MyAdapter adapter;
     FloatingActionButton fb;
 
@@ -33,8 +34,8 @@ public class DonorList extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
-        recview= findViewById(R.id.recview);
-        recview.setLayoutManager(new LinearLayoutManager(this));
+        recView= findViewById(R.id.recview);
+        recView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
@@ -42,7 +43,7 @@ public class DonorList extends AppCompatActivity {
                         .build();
 
         adapter=new MyAdapter(options);
-        recview.setAdapter(adapter);
+        recView.setAdapter(adapter);
 
         fb= findViewById(R.id.fadd);
         fb.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(),AddDonor.class)));
@@ -65,12 +66,13 @@ public class DonorList extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     protected void onStart() {
         super.onStart();
-        recview.getRecycledViewPool().clear();
+        recView.getRecycledViewPool().clear();
         adapter.startListening();
-        recview.getRecycledViewPool().clear();
+        recView.getRecycledViewPool().clear();
         adapter.notifyDataSetChanged();
 
     }
@@ -93,13 +95,13 @@ public class DonorList extends AppCompatActivity {
         {
             @Override
             public boolean onQueryTextSubmit(String s) {
-                processsearch(s.length()==0? s : s.substring(0,1).toUpperCase()+s.substring(1).toLowerCase());
+                processSearch(s.length()==0? s : s.substring(0,1).toUpperCase()+s.substring(1).toLowerCase());
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String s) {
-                processsearch(s.length()==0? s : s.substring(0,1).toUpperCase()+s.substring(1).toLowerCase());
+                processSearch(s.length()==0? s : s.substring(0,1).toUpperCase()+s.substring(1).toLowerCase());
                 return false;
             }
         });
@@ -107,7 +109,7 @@ public class DonorList extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    private void processsearch(String s)
+    private void processSearch(String s)
     {
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
@@ -116,7 +118,7 @@ public class DonorList extends AppCompatActivity {
 
         adapter=new MyAdapter(options);
         adapter.startListening();
-        recview.setAdapter(adapter);
+        recView.setAdapter(adapter);
     }
 
 }

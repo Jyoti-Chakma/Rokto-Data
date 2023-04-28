@@ -1,11 +1,10 @@
 package com.jyoti.unmesh;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class GroupList extends AppCompatActivity {
 
@@ -25,71 +24,47 @@ public class GroupList extends AppCompatActivity {
         oNegative = findViewById(R.id.oNegative);
 
 
-        aPositive.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(GroupList.this,APositive.class);
-                startActivity(i);
-            }
+        aPositive.setOnClickListener(view -> {
+            Intent i = new Intent(GroupList.this,APositive.class);
+            startActivity(i);
         });
 
 
-        aNegative.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(GroupList.this,ANegative.class);
-                startActivity(i);
-            }
+        aNegative.setOnClickListener(view -> {
+            Intent i = new Intent(GroupList.this,ANegative.class);
+            startActivity(i);
         });
 
 
-        bPositive.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(GroupList.this,BPositive.class);
-                startActivity(i);
-            }
+        bPositive.setOnClickListener(view -> {
+            Intent i = new Intent(GroupList.this,BPositive.class);
+            startActivity(i);
         });
 
-        bNegative.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(GroupList.this,BNegative.class);
-                startActivity(i);
-            }
+        bNegative.setOnClickListener(view -> {
+            Intent i = new Intent(GroupList.this,BNegative.class);
+            startActivity(i);
         });
 
-        abPositive.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(GroupList.this,ABPositive.class);
-                startActivity(i);
-            }
+        abPositive.setOnClickListener(view -> {
+            Intent i = new Intent(GroupList.this,ABPositive.class);
+            startActivity(i);
         });
 
 
-        abNegative.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(GroupList.this,ABNegative.class);
-                startActivity(i);
-            }
+        abNegative.setOnClickListener(view -> {
+            Intent i = new Intent(GroupList.this,ABNegative.class);
+            startActivity(i);
         });
 
-        oPositive.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(GroupList.this,OPositive.class);
-                startActivity(i);
-            }
+        oPositive.setOnClickListener(view -> {
+            Intent i = new Intent(GroupList.this,OPositive.class);
+            startActivity(i);
         });
 
-        oNegative.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(GroupList.this,ONegative.class);
-                startActivity(i);
-            }
+        oNegative.setOnClickListener(view -> {
+            Intent i = new Intent(GroupList.this,ONegative.class);
+            startActivity(i);
         });
     }
 

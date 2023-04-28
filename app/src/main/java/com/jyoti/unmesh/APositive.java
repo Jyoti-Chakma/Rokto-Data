@@ -1,15 +1,14 @@
 package com.jyoti.unmesh;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class APositive extends AppCompatActivity {
@@ -23,7 +22,7 @@ public class APositive extends AppCompatActivity {
         setContentView(R.layout.activity_apositive);
         setTitle("A+ Blood Donors");
 
-        aPositiveView=(RecyclerView)findViewById(R.id.aPositiveView);
+        aPositiveView = findViewById(R.id.aPositiveView);
         aPositiveView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<model> options =
@@ -36,6 +35,7 @@ public class APositive extends AppCompatActivity {
 
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     protected void onStart() {
         super.onStart();

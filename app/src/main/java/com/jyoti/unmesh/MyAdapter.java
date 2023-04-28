@@ -3,7 +3,6 @@ package com.jyoti.unmesh;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -18,8 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.FirebaseDatabase;
 import com.orhanobut.dialogplus.DialogPlus;
@@ -28,17 +25,15 @@ import com.orhanobut.dialogplus.ViewHolder;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewholder> {
-    public MyAdapter(@NonNull FirebaseRecyclerOptions<model> options)
-    {
+public class MyAdapter extends FirebaseRecyclerAdapter<model, MyAdapter.myViewHolder> {
+    public MyAdapter(@NonNull FirebaseRecyclerOptions<model> options) {
         super(options);
     }
 
     Context context;
 
     @Override
-    protected void onBindViewHolder(@NonNull final myviewholder holder, @SuppressLint("RecyclerView") final int position, @NonNull final model model)
-    {
+    protected void onBindViewHolder(@NonNull final myViewHolder holder, @SuppressLint("RecyclerView") final int position, @NonNull final model model) {
         holder.name.setText(model.getName());
         holder.address.setText(model.getAddress());
         holder.donated.setText(model.getDonated());
@@ -51,29 +46,23 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
             Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(s));
             v.getContext().startActivity(intent);
 
-
-
-//                Intent callIntent = new Intent(Intent.ACTION_CALL);
-//                callIntent.setData(Uri.parse("tel:"+call));
-//                startActivity(callIntent);
-
         });
 
 
         holder.edit.setOnClickListener(view -> {
-            final DialogPlus dialogPlus=DialogPlus.newDialog(holder.name.getContext())
+            final DialogPlus dialogPlus = DialogPlus.newDialog(holder.name.getContext())
                     .setContentHolder(new ViewHolder(R.layout.dialogcontent))
-                    .setExpanded(true,1500)
+                    .setExpanded(true, 1500)
                     .create();
 
-            View myview=dialogPlus.getHolderView();
-            final TextInputEditText name=myview.findViewById(R.id.nameEdit);
-            final TextInputEditText address=myview.findViewById(R.id.addressEdit);
-            final TextInputEditText donated=myview.findViewById(R.id.donatedEdit);
-            final TextInputEditText age=myview.findViewById(R.id.ageEdit);
-            final TextInputEditText blood=myview.findViewById(R.id.bloodEdit);
-            final TextInputEditText phone=myview.findViewById(R.id.phoneEdit);
-            Button submit=myview.findViewById(R.id.usubmit);
+            View myView = dialogPlus.getHolderView();
+            final TextInputEditText name = myView.findViewById(R.id.nameEdit);
+            final TextInputEditText address = myView.findViewById(R.id.addressEdit);
+            final TextInputEditText donated = myView.findViewById(R.id.donatedEdit);
+            final TextInputEditText age = myView.findViewById(R.id.ageEdit);
+            final TextInputEditText blood = myView.findViewById(R.id.bloodEdit);
+            final TextInputEditText phone = myView.findViewById(R.id.phoneEdit);
+            Button submit = myView.findViewById(R.id.usubmit);
 
 
             name.setText(model.getName());
@@ -86,28 +75,18 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
             dialogPlus.show();
 
             submit.setOnClickListener(view1 -> {
-                Map<String,Object> map=new HashMap<>();
-                map.put("name",name.getText().toString());
+                Map<String, Object> map = new HashMap<>();
+                map.put("name", name.getText().toString());
                 map.put("address", address.getText().toString());
-                map.put("donated",donated.getText().toString());
-                map.put("age",age.getText().toString());
-                map.put("blood",blood.getText().toString());
-                map.put("phone",phone.getText().toString());
+                map.put("donated", donated.getText().toString());
+                map.put("age", age.getText().toString());
+                map.put("blood", blood.getText().toString());
+                map.put("phone", phone.getText().toString());
 
                 FirebaseDatabase.getInstance().getReference().child("donors")
                         .child(getRef(position).getKey()).updateChildren(map)
-                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                dialogPlus.dismiss();
-                            }
-                        })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                dialogPlus.dismiss();
-                            }
-                        });
+                        .addOnSuccessListener(aVoid -> dialogPlus.dismiss())
+                        .addOnFailureListener(e -> dialogPlus.dismiss());
             });
 
 
@@ -115,56 +94,46 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model,MyAdapter.myviewhol
 
 
         holder.delete.setOnClickListener(view -> {
-            AlertDialog.Builder builder=new AlertDialog.Builder(holder.name.getContext());
+            AlertDialog.Builder builder = new AlertDialog.Builder(holder.name.getContext());
             builder.setTitle("Delete Donors?");
             builder.setMessage("Are you sure?");
 
-            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    FirebaseDatabase.getInstance().getReference().child("donors")
-                            .child(getRef(position).getKey()).removeValue();
-                }
-            });
+            builder.setPositiveButton("Yes", (dialogInterface, i) -> FirebaseDatabase.getInstance().getReference().child("donors")
+                    .child(getRef(position).getKey()).removeValue());
 
-            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
+            builder.setNegativeButton("No", (dialogInterface, i) -> {
 
-                }
             });
 
             builder.show();
         });
 
     } // End of OnBindVi// ewMethod
+
     @NonNull
     @Override
-    public myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
-    {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item,parent,false);
-        return new myviewholder(view);
+    public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
+        return new myViewHolder(view);
     }
 
 
-    class myviewholder extends RecyclerView.ViewHolder
-    {
+    class myViewHolder extends RecyclerView.ViewHolder {
 
-        Button edit,delete;
+        Button edit, delete;
         ImageButton call;
-        TextView name,address,donated,age,blood;
-        public myviewholder(@NonNull View itemView)
-        {
-            super(itemView);
-            name=(TextView)itemView.findViewById(R.id.nameText);
-            address=(TextView)itemView.findViewById(R.id.address);
-            donated=(TextView)itemView.findViewById(R.id.lastDonated);
-            age=(TextView)itemView.findViewById(R.id.tvage);
-            blood=(TextView)itemView.findViewById(R.id.bloodgroup);
-            call= itemView.findViewById(R.id.phone);
+        TextView name, address, donated, age, blood;
 
-            edit=(Button)itemView.findViewById(R.id.editButton);
-            delete=(Button)itemView.findViewById(R.id.deleteButton);
+        public myViewHolder(@NonNull View itemView) {
+            super(itemView);
+            name = itemView.findViewById(R.id.nameText);
+            address = itemView.findViewById(R.id.address);
+            donated = itemView.findViewById(R.id.lastDonated);
+            age = itemView.findViewById(R.id.tvage);
+            blood = itemView.findViewById(R.id.bloodgroup);
+            call = itemView.findViewById(R.id.phone);
+            edit = itemView.findViewById(R.id.editButton);
+            delete = itemView.findViewById(R.id.deleteButton);
         }
 
     }

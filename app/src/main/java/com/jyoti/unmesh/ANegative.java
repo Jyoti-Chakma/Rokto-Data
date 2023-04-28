@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -21,7 +22,7 @@ public class ANegative extends AppCompatActivity {
         setContentView(R.layout.activity_anegative);
         setTitle("A- Blood Donors");
 
-        aNegativeView=(RecyclerView)findViewById(R.id.aNegativeView);
+        aNegativeView = findViewById(R.id.aNegativeView);
         aNegativeView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<model> options =
@@ -34,6 +35,7 @@ public class ANegative extends AppCompatActivity {
 
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     protected void onStart() {
         super.onStart();
