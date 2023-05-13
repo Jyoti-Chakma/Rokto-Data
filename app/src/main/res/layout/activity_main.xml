@@ -18,7 +18,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:src="@drawable/unmesh" />
+            android:src="@drawable/logo" />
 
         <TextView
             android:id="@+id/textView2"
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:paddingBottom="15dp"
-            android:text="উন্মেষ"
+            android:text="Rokto-Data"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -38,7 +38,7 @@
             android:layout_marginHorizontal="5dp"
             android:gravity="center"
             android:paddingHorizontal="10dp"
-            android:text="বিনামুল্যে রক্তদান এবং বিভিন্ন সামাজিক স্বেচ্ছাসেবিমুলক কাজে এগিয়ে আসার উদ্দেশ্যে উন্মেষ এর পথ চলা"
+            android:text="Give blood, give life."
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
