@@ -15,17 +15,18 @@ Rokto-Data is an app for managing Blood Donors. It's suitable for Blood Bank Adm
 
 
 
-## Technology
+## Database
 
-**Database:** Firebase
+**Database:** Firebase Realtime Database
+
+**Structures
+![database](https://github.com/Jyoti-Chakma/Rokto-Data/blob/master/Screenshots/realtime-database.png)
 
 ## Contributing
 
 Contributions are always welcome!
 
 ## Screenshots
-
-![App Screenshot](https://github.com/Jyoti-Chakma/Rokto-Data/blob/master/Screenshots/main-screen.jpeg)
 
 | Main Screen                            | Donor List                            | Add Donor                                     |
 | ----------------------------------- | ----------------------------------- | ------------------------------------------- |
