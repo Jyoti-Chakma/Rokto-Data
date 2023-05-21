@@ -1,7 +1,7 @@
 
 # Rokto-Data
 
-Rokto-Data is an app for managing Blood Donors. It's suitable for Blood Bank Admins to quickly find donors from their donor dataabse.
+Rokto-Data is an app for managing Blood Donors. It's suitable for Blood Bank Admins to quickly find donors from their donor database.
 
 ## Features
 
