@@ -30,6 +30,11 @@ donors from their donor database.
 |-------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
 | ![update-donor](https://github.com/Jyoti-Chakma/Rokto-Data/blob/master/Screenshots/update-donor.jpeg) | ![blood-group](https://github.com/Jyoti-Chakma/Rokto-Data/blob/master/Screenshots/blood-group.jpeg) | ![filter-by-donor](https://github.com/Jyoti-Chakma/Rokto-Data/blob/master/Screenshots/filter-by-group.jpeg) |
 
+
+## License
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/Jyoti-Chakma/Rokto-Data/blob/master/LICENSE.txt)
+
 ## Contributing
 
 Contributions are always welcome!
