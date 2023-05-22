@@ -118,7 +118,7 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model, MyAdapter.myViewHo
     }
 
 
-    class myViewHolder extends RecyclerView.ViewHolder {
+    static class myViewHolder extends RecyclerView.ViewHolder {
 
         Button edit, delete;
         ImageButton call;
