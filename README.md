@@ -14,7 +14,6 @@ Rokto-Data is an app for managing Blood Donors. It's suitable for Blood Bank Adm
 - Save Emergency and Hospitals Phone Number
 
 
-
 ## Database
 
 **Database:** Firebase Realtime Database
