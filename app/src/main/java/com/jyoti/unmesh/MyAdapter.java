@@ -2,7 +2,6 @@ package com.jyoti.unmesh;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -30,8 +29,6 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model, MyAdapter.myViewHo
     public MyAdapter(@NonNull FirebaseRecyclerOptions<model> options) {
         super(options);
     }
-
-    Context context;
 
     @Override
     protected void onBindViewHolder(@NonNull final myViewHolder holder, @SuppressLint("RecyclerView") final int position, @NonNull final model model) {
@@ -121,9 +118,14 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model, MyAdapter.myViewHo
 
     static class myViewHolder extends RecyclerView.ViewHolder {
 
-        Button edit, delete;
-        ImageButton call;
-        TextView name, address, donated, age, blood;
+        final Button edit;
+        final Button delete;
+        final ImageButton call;
+        TextView name;
+        final TextView address;
+        final TextView donated;
+        final TextView age;
+        TextView blood;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
