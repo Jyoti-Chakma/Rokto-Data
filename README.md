@@ -24,13 +24,13 @@ Rokto-Data is an app for managing Blood Donors. It's suitable for Blood Bank Adm
 
 ## Screenshots
 
-| Main Screen                            | Donor List                            | Add Donor                                     |
-| ----------------------------------- | ----------------------------------- | ------------------------------------------- |
+| Main Screen                                                                                         | Donor List                                                                                        | Add Donor                                                                                       |
+|-----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | ![main-screen](https://github.com/Jyoti-Chakma/Rokto-Data/blob/master/Screenshots/main-screen.jpeg) | ![donor-list](https://github.com/Jyoti-Chakma/Rokto-Data/blob/master/Screenshots/donor-list.jpeg) | ![add-donor](https://github.com/Jyoti-Chakma/Rokto-Data/blob/master/Screenshots/add-donor.jpeg) |
 
 
-| Update Donor Data                            | Blood Group                             | Filter By Blood Group                                     |
-| ----------------------------------- | ----------------------------------- | ------------------------------------------- |
+| Update Donor Data                                                                                     | Blood Group                                                                                         | Filter By Blood Group                                                                                       |
+|-------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
 | ![update-donor](https://github.com/Jyoti-Chakma/Rokto-Data/blob/master/Screenshots/update-donor.jpeg) | ![blood-group](https://github.com/Jyoti-Chakma/Rokto-Data/blob/master/Screenshots/blood-group.jpeg) | ![filter-by-donor](https://github.com/Jyoti-Chakma/Rokto-Data/blob/master/Screenshots/filter-by-group.jpeg) |
 
 ## Contributing
