@@ -24,6 +24,7 @@ import com.orhanobut.dialogplus.ViewHolder;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class MyAdapter extends FirebaseRecyclerAdapter<model, MyAdapter.myViewHolder> {
     public MyAdapter(@NonNull FirebaseRecyclerOptions<model> options) {
@@ -76,15 +77,15 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model, MyAdapter.myViewHo
 
             submit.setOnClickListener(view1 -> {
                 Map<String, Object> map = new HashMap<>();
-                map.put("name", name.getText().toString());
-                map.put("address", address.getText().toString());
-                map.put("donated", donated.getText().toString());
-                map.put("age", age.getText().toString());
-                map.put("blood", blood.getText().toString());
-                map.put("phone", phone.getText().toString());
+                map.put("name", Objects.requireNonNull(name.getText()).toString());
+                map.put("address", Objects.requireNonNull(address.getText()).toString());
+                map.put("donated", Objects.requireNonNull(donated.getText()).toString());
+                map.put("age", Objects.requireNonNull(age.getText()).toString());
+                map.put("blood", Objects.requireNonNull(blood.getText()).toString());
+                map.put("phone", Objects.requireNonNull(phone.getText()).toString());
 
                 FirebaseDatabase.getInstance().getReference().child("donors")
-                        .child(getRef(position).getKey()).updateChildren(map)
+                        .child(Objects.requireNonNull(getRef(position).getKey())).updateChildren(map)
                         .addOnSuccessListener(aVoid -> dialogPlus.dismiss())
                         .addOnFailureListener(e -> dialogPlus.dismiss());
             });
@@ -99,7 +100,7 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model, MyAdapter.myViewHo
             builder.setMessage("Are you sure?");
 
             builder.setPositiveButton("Yes", (dialogInterface, i) -> FirebaseDatabase.getInstance().getReference().child("donors")
-                    .child(getRef(position).getKey()).removeValue());
+                    .child(Objects.requireNonNull(getRef(position).getKey())).removeValue());
 
             builder.setNegativeButton("No", (dialogInterface, i) -> {
 
