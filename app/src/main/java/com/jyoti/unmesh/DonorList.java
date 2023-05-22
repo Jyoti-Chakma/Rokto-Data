@@ -33,10 +33,10 @@ public class DonorList extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-
         recView = findViewById(R.id.recview);
         recView.setLayoutManager(new LinearLayoutManager(this));
 
+        // Fetch All Donors from Firebase
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("donors"), model.class)

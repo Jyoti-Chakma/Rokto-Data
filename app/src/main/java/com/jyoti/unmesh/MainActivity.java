@@ -29,20 +29,16 @@ public class MainActivity extends AppCompatActivity {
             finish();
         });
 
-
         frequency.setOnClickListener(view -> {
             Intent i = new Intent(MainActivity.this, APositive.class);
             startActivity(i);
             finish();
         });
 
-
         groupList.setOnClickListener(view -> {
             Intent i = new Intent(MainActivity.this, GroupList.class);
             startActivity(i);
             finish();
         });
-
-
     }
 }

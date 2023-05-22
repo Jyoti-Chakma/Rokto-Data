@@ -46,7 +46,6 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model, MyAdapter.myViewHo
 
         });
 
-
         holder.edit.setOnClickListener(view -> {
             final DialogPlus dialogPlus = DialogPlus.newDialog(holder.name.getContext())
                     .setContentHolder(new ViewHolder(R.layout.dialogcontent))
@@ -61,7 +60,6 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model, MyAdapter.myViewHo
             final TextInputEditText blood = myView.findViewById(R.id.bloodEdit);
             final TextInputEditText phone = myView.findViewById(R.id.phoneEdit);
             Button submit = myView.findViewById(R.id.usubmit);
-
 
             name.setText(model.getName());
             address.setText(model.getAddress());
@@ -87,9 +85,7 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model, MyAdapter.myViewHo
                         .addOnFailureListener(e -> dialogPlus.dismiss());
             });
 
-
         });
-
 
         holder.delete.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(holder.name.getContext());
@@ -115,7 +111,6 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model, MyAdapter.myViewHo
         return new myViewHolder(view);
     }
 
-
     static class myViewHolder extends RecyclerView.ViewHolder {
 
         final Button edit;
@@ -138,7 +133,5 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model, MyAdapter.myViewHo
             edit = itemView.findViewById(R.id.editButton);
             delete = itemView.findViewById(R.id.deleteButton);
         }
-
     }
-
 }

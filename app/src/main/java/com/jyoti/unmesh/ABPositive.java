@@ -25,6 +25,7 @@ public class ABPositive extends AppCompatActivity {
         abPositiveView = findViewById(R.id.abPositiveView);
         abPositiveView.setLayoutManager(new LinearLayoutManager(this));
 
+        // Filtering AB+ Blood Group from the List
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("donors").orderByChild("blood").equalTo("AB+"), model.class)

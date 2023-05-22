@@ -1,7 +1,7 @@
-
 # Rokto-Data
 
-Rokto-Data is an app for managing Blood Donors. It's suitable for Blood Bank Admins to quickly find donors from their donor database.
+Rokto-Data is an app for managing Blood Donors. It's suitable for Blood Bank Admins to quickly find
+donors from their donor database.
 
 ## Features
 
@@ -12,7 +12,6 @@ Rokto-Data is an app for managing Blood Donors. It's suitable for Blood Bank Adm
 - Add/Edit/Delete Donors
 - Call Donors Locally from One Tap
 - Save Emergency and Hospitals Phone Number
-
 
 ## Database
 
@@ -26,7 +25,6 @@ Rokto-Data is an app for managing Blood Donors. It's suitable for Blood Bank Adm
 | Main Screen                                                                                         | Donor List                                                                                        | Add Donor                                                                                       |
 |-----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | ![main-screen](https://github.com/Jyoti-Chakma/Rokto-Data/blob/master/Screenshots/main-screen.jpeg) | ![donor-list](https://github.com/Jyoti-Chakma/Rokto-Data/blob/master/Screenshots/donor-list.jpeg) | ![add-donor](https://github.com/Jyoti-Chakma/Rokto-Data/blob/master/Screenshots/add-donor.jpeg) |
-
 
 | Update Donor Data                                                                                     | Blood Group                                                                                         | Filter By Blood Group                                                                                       |
 |-------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|

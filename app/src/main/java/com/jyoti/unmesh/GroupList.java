@@ -24,18 +24,15 @@ public class GroupList extends AppCompatActivity {
         oPositive = findViewById(R.id.oPositive);
         oNegative = findViewById(R.id.oNegative);
 
-
         aPositive.setOnClickListener(view -> {
             Intent i = new Intent(GroupList.this, APositive.class);
             startActivity(i);
         });
 
-
         aNegative.setOnClickListener(view -> {
             Intent i = new Intent(GroupList.this, ANegative.class);
             startActivity(i);
         });
-
 
         bPositive.setOnClickListener(view -> {
             Intent i = new Intent(GroupList.this, BPositive.class);
@@ -52,7 +49,6 @@ public class GroupList extends AppCompatActivity {
             startActivity(i);
         });
 
-
         abNegative.setOnClickListener(view -> {
             Intent i = new Intent(GroupList.this, ABNegative.class);
             startActivity(i);
@@ -68,7 +64,6 @@ public class GroupList extends AppCompatActivity {
             startActivity(i);
         });
     }
-
 
     @Override
     public void onBackPressed() {

@@ -188,7 +188,5 @@
                     android:text="O-" />
             </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
-
 </LinearLayout>

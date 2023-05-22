@@ -53,6 +53,8 @@ public class AddDonor extends AppCompatActivity {
         map.put("age", age.getText().toString());
         map.put("blood", blood.getText().toString());
         map.put("phone", phone.getText().toString());
+
+        // Add Donors to Database
         FirebaseDatabase.getInstance().getReference().child("donors").push()
                 .setValue(map)
                 .addOnSuccessListener(aVoid -> {

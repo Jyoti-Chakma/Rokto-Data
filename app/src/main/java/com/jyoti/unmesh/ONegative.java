@@ -25,6 +25,7 @@ public class ONegative extends AppCompatActivity {
         oNegativeView = findViewById(R.id.oNegativeView);
         oNegativeView.setLayoutManager(new LinearLayoutManager(this));
 
+        // Filtering O- Blood Group from the List
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("donors").orderByChild("blood").equalTo("O-"), model.class)

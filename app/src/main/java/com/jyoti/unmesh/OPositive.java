@@ -25,6 +25,7 @@ public class OPositive extends AppCompatActivity {
         oPositiveView = findViewById(R.id.oPositiveView);
         oPositiveView.setLayoutManager(new LinearLayoutManager(this));
 
+        // Filtering O+ Blood Group from the List
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("donors").orderByChild("blood").equalTo("O+"), model.class)

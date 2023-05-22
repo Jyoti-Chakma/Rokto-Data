@@ -25,6 +25,7 @@ public class BNegative extends AppCompatActivity {
         bNegativeView = findViewById(R.id.bNegativeView);
         bNegativeView.setLayoutManager(new LinearLayoutManager(this));
 
+        // Filtering B- Blood Group from the List
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("donors").orderByChild("blood").equalTo("B-"), model.class)
