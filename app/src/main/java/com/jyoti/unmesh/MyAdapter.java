@@ -116,11 +116,11 @@ public class MyAdapter extends FirebaseRecyclerAdapter<model, MyAdapter.myViewHo
         final Button edit;
         final Button delete;
         final ImageButton call;
-        TextView name;
+        final TextView name;
         final TextView address;
         final TextView donated;
         final TextView age;
-        TextView blood;
+        final TextView blood;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
